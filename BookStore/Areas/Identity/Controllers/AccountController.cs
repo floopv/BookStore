@@ -31,11 +31,13 @@ namespace BookStore.Areas.Identity.Controllers
         public async Task<IActionResult> Register(RegisterRequest registerRequest)
         {
             //ApplicationUser applicationUser = registerVM.Adapt<ApplicationUser>();
+            var randomNumber = new Random().Next();
             ApplicationUser applicationUser = new ApplicationUser
             {
                 FirstName = registerRequest.FirstName,
                 LastName = registerRequest.LastName,
-                Email = registerRequest.Email
+                Email = registerRequest.Email,
+                UserName = $"{registerRequest.FirstName}{registerRequest.LastName}{randomNumber}"
             };
             var result = await _userManager.CreateAsync(applicationUser, registerRequest.Password);
             if (!result.Succeeded)

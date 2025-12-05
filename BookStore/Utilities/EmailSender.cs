@@ -13,7 +13,7 @@ namespace BookStore.Utilities
             {
                 EnableSsl = true,
                 UseDefaultCredentials = false,
-                Credentials = new NetworkCredential("philonaeem3@gmail.com", "utcl llmm fgwj mltl\r\n")
+                Credentials = new NetworkCredential("philonaeem3@gmail.com", "dqst gzgd oqvr ngfc\r\n")
             };
 
             return client.SendMailAsync(

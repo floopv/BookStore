@@ -33,11 +33,11 @@ namespace BookStore
 
             //Data Seeding
 
-            using (var scope = app.Services.CreateScope())
-            {
-                var dbInitializer = scope.ServiceProvider.GetRequiredService<IDbInitializer>();
-                dbInitializer.Initialize();
-            }
+            //using (var scope = app.Services.CreateScope())
+            //{
+            //    var dbInitializer = scope.ServiceProvider.GetRequiredService<IDbInitializer>();
+            //    dbInitializer.Initialize();
+            //}
 
             // Configure the HTTP request pipeline.
             if (app.Environment.IsDevelopment())
