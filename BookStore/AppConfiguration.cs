@@ -16,6 +16,9 @@ namespace BookStore
             Services.AddScoped<IDbInitializer, DbInitializer>();  
             Services.AddScoped<IRepository<ApplicationUserOTP>,Repository<ApplicationUserOTP> >();  
             Services.AddScoped<IRepository<Book>,Repository<Book> >();  
+            Services.AddScoped<IRepository<Cart>,Repository<Cart> >();  
+            Services.AddScoped<IRepository<Promotion>,Repository<Promotion> >();  
+            Services.AddScoped<IRepository<ApplicationUserPromotionCode>,Repository<ApplicationUserPromotionCode> >();  
 
             Services.AddDbContext<BookStoreDbContext>(options =>
             {
